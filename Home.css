@@ -1,0 +1,173 @@
+:root {
+    --primary-gold: #DDBB6A;
+    --secondary-gray: #D3D3D5;
+    --card-bg: #111; /* Darker background for cards */
+}
+
+body {
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px 50px; /* Increased side padding */
+    color: var(--secondary-gray);
+}
+
+/* --- HEADER SECTION --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 60px; /* Space between header and new content */
+}
+
+.header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-img {
+    height: 150px;
+    object-fit: contain;
+}
+
+.header-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--secondary-gray);
+    line-height: 1.4;
+}
+
+#dynamic-text {
+    color: var(--primary-gold);
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+}
+
+/* --- BUTTONS & ICONS --- */
+.about-btn {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    background-color: var(--primary-gold);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(221, 187, 106, 0.3);
+}
+
+.about-btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-link svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--secondary-gray);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover svg {
+    fill: var(--primary-gold);
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px var(--primary-gold));
+}
+
+/* --- PROFILE PICTURE --- */
+.profile-pic {
+    height: 150px; 
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-gold);
+    box-shadow: 0 0 15px 5px rgba(221, 187, 106, 0.5);
+    background-color: black;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 0 30px 10px rgba(221, 187, 106, 0.8);
+}
+
+/* --- NEW SECTION: WHAT I DO (Cards) --- */
+.section-title {
+    color: var(--primary-gold);
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-gold);
+    padding-left: 15px;
+}
+
+.services-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows cards to stack on small screens */
+    margin-bottom: 60px;
+}
+
+.service-card {
+    flex: 1; /* Makes cards equal width */
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    min-width: 250px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 5px 15px rgba(221, 187, 106, 0.1);
+}
+
+.service-card h3 {
+    color: white;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+/* --- NEW SECTION: TECH STACK BAR --- */
+.tech-stack {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+}
+
+.tech-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tech-tag {
+    background-color: #222;
+    color: var(--primary-gold);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid var(--primary-gold);
+    cursor: default;
+}
